@@ -1,0 +1,1790 @@
+kiriakos
+kiriakos_theodoropoulos
+Συνδεδεμένος
+
+Hector — 27/05/2025 21:10
+https://app.filen.io/#/d/99f9e126-165a-4416-99cc-1cc1213d7c6e%23XOvqkLRs2dwkkuAUnYTNTzVpC2KS62Zu
+Filen
+Filen – Next Generation End-To-End Encrypted Cloud Platform. Get started with 10 GB of free storage space.
+Hector — 27/05/2025 23:02
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      
+"8080:80"
+  volumes:
+.:/var/www/html
+depends_on:
+db
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      
+db_data:/var/lib/mysql
+
+volumes:
+  db_data:
+http://localhost/SpotifyRevancedon.php
+http://localhost:8080/index.php?route=/database/structure&db=streaming_site
+Hector — 28/05/2025 00:16
+https://drive.filen.io/d/cf186118-7061-4e24-af08-dad989189598#AnKP2dYOmzXYHuClJobj2V1hmpI5uLzv
+Filen Drive
+Filen – Next Generation End-To-End Encrypted Cloud Platform. Get started with 10 GB of free storage space.
+kiriakos — 28/05/2025 11:14
+Τύπος συνημμένου αρχείου: document
+Video Revanced.docx
+25.84 KB
+Hector — 28/05/2025 11:41
+Εικόνα
+Εικόνα
+Εικόνα
+Εικόνα
+Εικόνα
+Hector — 28/05/2025 12:26
+https://app.filen.io/#/d/3e6b3244-4901-4e6b-a3ea-7326f422eab1%23iQZmfNnRQoU5vd5dqP4rva2BLLobqVHF
+Filen
+Filen – Next Generation End-To-End Encrypted Cloud Platform. Get started with 10 GB of free storage space.
+Hector — 28/05/2025 14:25
+https://chatgpt.com/share/68350be7-63cc-8005-8033-99b43845c5da
+ChatGPT
+ChatGPT - K-fold Cross Validation Explained
+Shared via ChatGPT
+Εικόνα
+Hector — 28/05/2025 23:50
+Για το split σε train και test χρησιμοποιήθηκε k-fold cross validation που έσπαγε το dataset σε 90% train & 10% test.
+Επίσης έβαλα feature selection που χρησιμοποιούσε μόνο τις 10 πιο χρήσιμες κατηγορίες ανά fold. Έβαλα όλα αυτά σε ένα pipeline για να περιορίσω 
+πιθανό data leak και τέλος για το model training χρησιμοποίησα το random forest. Στην αρχική του μορφή δεν λειτουργούσε πολύ δίνοντας πολύ υψηλό ποσοστό ακρίβειας το "όχι" ~90%. Όμως για το "Ναι" η ιστορία είναι διαφορετική καθώς είχε αρχικά ποσοστό ακρίβειας μόνο ~40%. Έπειτα δοκίμασα να μειώσω το threshold για την ευκολία που θα μπορούσε να προκύψει το "ναι", από 0.5 σε 0.3 έχοντας το 0.5 ως συντηρητικός αλλά ακριβής, μία μέση λύση. Αυτή η αλλαγή είχε αύξηση ~10% για το "Ναι" και το "Όχι" ήταν στα ίδια νούμερα (το όχι είναι πάντα στο ίδιο ποσοστό και δεν θα αναφερθώ άλλο σε αυτό). Επίσης δοκίμασα αντί να μειώσω το threshold να κάνω oversample το "ναι" και το έκανα με RandomOversampler που έδωσε μία αύξηση του "ναι" ~5%. Αν βάλω συνδυαστικά και τα δυο ανεβαίνει στο ~7% κάτι που είναι παράξενο καθώς από μόνο του το threshold κανονικά αυξάνει γύρω 
+στο 10%. Τέλος άλλαξα το oversampler σε Smotenc και είδα αύξηση ~11% όμως αν βάλω και threshold περιέργως μειώνεται ~-3%, οπότε εν τέλη κατέληξα 
+σε smotenc μαζί με threshold 0.45 που είχε αύξηση ~12%.
+notes.txt
+3 KB
+αυτό είναι για το Report
+βάλε το στο δικό σου και κάνε ότι μικροαλλαγές θέλει για ομορφιά
+kiriakos — 30/05/2025 18:41
+Τύπος συνημμένου αρχείου: document
+dss.docx
+255.80 KB
+to report
+Hector — 31/05/2025 13:24
+κομπλε φαίνεται
+μία χαρά
+kiriakos — 31/05/2025 14:24
+Στείλε του το μαζί με τον κώδικα κ όλα αυτά
+Hector — 31/05/2025 14:25
+νια οκ οκ
+kiriakos — 31/05/2025 14:42
+Όταν το στείλεις πες μου
+Hector — 31/05/2025 14:42
+οκ
+Hector — 02/06/2025 04:51
+Δεν μπορώ να το στείλω, δεν έχει λινκ ακόμα για να την εργασία
+kiriakos — 03/06/2025 19:37
+του το στελνεις σε ιμαιλ
+Hector — 03/06/2025 19:38
+Όχι, το ξανάνοιξε τλκ και το ανέβασα
+kiriakos — 03/06/2025 19:38
+καταλαθος με πηρες;
+Hector — 03/06/2025 19:41
+Ναι 😅
+kiriakos — 19/09/2025 18:25
+μπρο ολα καλα;
+Hector — 19/09/2025 18:26
+Ναι τα βρηκα
+Θα σου πω
+kiriakos — 19/09/2025 18:26
+υπομονη]
+Hector — 19/09/2025 20:33
+Θενκ γιου
+Θενκ γιου
+kiriakos — 23/09/2025 17:00
+Βγήκαν πιθανότητες
+Αυτό δν χρωσταγες;
+Hector — 23/09/2025 18:43
+Μλκ πέρασα
+5 απίστευτο
+kiriakos — 23/11/2025 21:08
+Τύπος συνημμένου αρχείου: unknown
+ΒΙΟΙΑΤΡΙΚΗ.odp
+81.78 KB
+Hector — 23/11/2025 21:56
+Ουσιαστικά θα πεις το πως καταφέραμε να κατά πολεμήσουμε τον covid?
+Θα πεις όλη την ιστορία από το πως άρχησε και την διαδικασία δημιουργίας φαρμάκων?
+Κατάλαβα καλά?
+kiriakos — 23/11/2025 23:08
+Κάπως έτσι
+Hector — 23/11/2025 23:11
+Οκ οκ
+Εντ μεταξύ θελει PowerPoint εε, εγώ έκανα απλά ένα word
+Hector — 17/12/2025 19:09
+Αρχαιολογικό Μουσείο Ιωαννίνων: Q4785410
+
+Μουσείο Αργυροτεχνίας: Q24262597
+
+Βυζαντινό Μουσείο: Q5004702
+
+Μουσείο Κέρινων Ομοιωμάτων Βρέλλη: Q12882255
+
+Δημοτική Πινακοθήκη Ιωαννίνων: Q16329432
+
+Κατηγορία 2: Κάστρο & Ιστορία (ID: history)
+Κάστρο Ιωαννίνων: Q3034599
+
+Φετιχέ Τζαμί: Q5445974
+
+Τζαμί Ασλάν Πασά: Q731175
+
+Σουφαρί Σαράι: Q7564127
+
+Πύργος του Ρολογιού: Q12884179
+
+Κατηγορία 3: Φύση & Νησί (ID: nature)
+Λίμνη Παμβώτιδα: Q1144673
+
+Νήσος Ιωαννίνων: Q2465715
+
+Σπήλαιο Περάματος: Q776037
+
+Μονή Αγίου Παντελεήμονα (Νησί): Q3560649
+
+Μονή Φιλανθρωπινών: Q1924294
+Hector — Χθες στις 03:13
+εεε
+ακυρο αυτό το αρχειο που σου έσετιλα
+αυτό που θα σου στείλω τώρα έχει αλλαγμένες κάτι μεταβλητές, απλά στείλε το στον ai και πές το να σου προσαρμόσει το υπόλοιπο με βάση το καινούργιο αρχειο
+// Αρχείο: dummyData.js (FRONTEND VERSION)
+
+export const categories = [
+  {
+    id: "Q570116",
+    label: "Μουσεία",
+Ανάπτυξη
+dummyData.js
+9 KB
+Hector — 17:49
+const express = require('express');
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
+const { categories, poisByCategory, poiDetails } = require('./mockData'); 
+
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerDocument = YAML.load('./swagger.yaml');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Swagger Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// --- ΜΥΣΤΙΚΑ ΚΛΕΙΔΙΑ ---
+const ACCESS_SECRET = "my_super_secret_key_123"; 
+const REFRESH_SECRET = "my_refresh_secret_key_456";
+
+// --- ΒΑΣΗ ΧΡΗΣΤΩΝ (RAM) ---
+// Αποθηκεύει προσωρινά χρήστες: { "email": "password" }
+const users = {
+    "admin@test.com": "1234"
+};
+
+// --- ΒΟΗΘΗΤΙΚΕΣ ΣΥΝΑΡΤΗΣΕΙΣ ---
+
+// 1. Επιλογή Γλώσσας (Clean up JSON)
+function selectLanguage(item, lang) {
+    const suffix = (lang === 'en') ? '_en' : '_el';
+    const newItem = { ...item };
+
+    // Αντικατάσταση πεδίων με τη σωστή γλώσσα
+    if (newItem[`label${suffix}`]) newItem.label = newItem[`label${suffix}`];
+    if (newItem[`description${suffix}`]) newItem.description = newItem[`description${suffix}`];
+    if (newItem[`shortDescription${suffix}`]) newItem.shortDescription = newItem[`shortDescription${suffix}`];
+    if (newItem[`wikipediaUrl${suffix}`]) newItem.wikipediaUrl = newItem[`wikipediaUrl${suffix}`];
+
+    // Καθαρισμός των _en και _el
+    delete newItem.label_en; delete newItem.label_el;
+    delete newItem.description_en; delete newItem.description_el;
+    delete newItem.shortDescription_en; delete newItem.shortDescription_el;
+    delete newItem.wikipediaUrl_en; delete newItem.wikipediaUrl_el;
+
+    return newItem;
+}
+
+// 2. Middleware Ασφαλείας (Check Token)
+function authenticateToken(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
+
+    if (token == null) return res.status(401).json({ code: "UNAUTHORIZED", message: "Missing token" });
+
+    jwt.verify(token, ACCESS_SECRET, (err, user) => {
+        if (err) return res.status(403).json({ code: "FORBIDDEN", message: "Invalid or expired token" });
+        req.user = user;
+        next();
+    });
+}
+
+// --- ENDPOINTS ---
+
+// LOGIN (Δημιουργεί χρήστη αν δεν υπάρχει, αλλιώς ελέγχει κωδικό)
+app.post('/api/auth/login', (req, res) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.status(400).json({ code: "BAD_REQUEST", message: "Email and password are required." });
+    }
+
+    // Αν ο χρήστης υπάρχει, ελέγχουμε κωδικό
+    if (users[email]) {
+        if (users[email] !== password) {
+            return res.status(401).json({ code: "INVALID_CREDENTIALS", message: "Invalid password." });
+        }
+    } else {
+        // Αν δεν υπάρχει, τον φτιάχνουμε τώρα (Auto-Register)
+        users[email] = password;
+    }
+
+    // Παραγωγή Tokens
+    const accessToken = jwt.sign({ email: email }, ACCESS_SECRET, { expiresIn: '15m' });
+    const refreshToken = jwt.sign({ email: email }, REFRESH_SECRET, { expiresIn: '7d' });
+
+    res.json({ accessToken, refreshToken, tokenType: "Bearer", expiresIn: 900 });
+});
+
+// REFRESH TOKEN
+app.post('/api/auth/refresh', (req, res) => {
+    const { refreshToken } = req.body;
+    if (!refreshToken) return res.status(400).json({ code: "BAD_REQUEST", message: "refreshToken required." });
+
+    jwt.verify(refreshToken, REFRESH_SECRET, (err, user) => {
+        if (err) return res.status(401).json({ code: "INVALID_TOKEN", message: "Invalid refresh token." });
+        
+        const newAccessToken = jwt.sign({ email: user.email }, ACCESS_SECRET, { expiresIn: '15m' });
+        res.json({ accessToken: newAccessToken, refreshToken, tokenType: "Bearer", expiresIn: 900 });
+    });
+... (53 γραμμές ακόμα)
+Σύμπτυξη
+index.js
+6 KB
+openapi: 3.0.3
+info:
+  title: POI Explorer API
+  version: 1.0.0
+  description: |
+    RESTful API for a mobile app that displays Points of Interest (POIs)
+Ανάπτυξη
+swagger.yaml
+16 KB
+Hector — 18:23
+// Αρχείο: mockData.js (VERIFIED IMAGES VERSION)
+
+// 1. ΚΑΤΗΓΟΡΙΕΣ
+const categories = [
+  {
+    id: "Q570116",
+    label_el: "Μουσεία", description_el: "Μουσεία και χώροι πολιτισμού.",
+    label_en: "Museums", description_en: "Museums and cultural sites.",
+    poiCount: 5
+  },
+  {
+    id: "Q23413",
+    label_el: "Ιστορία", description_el: "Ιστορικά κτίρια και το Κάστρο.",
+    label_en: "History", description_en: "Historical buildings and the Castle.",
+    poiCount: 5
+  },
+  {
+    id: "Q20016",
+    label_el: "Φύση", description_el: "Η λίμνη Παμβώτιδα και φυσικά τοπία.",
+    label_en: "Nature", description_en: "Lake Pamvotis and natural landscapes.",
+    poiCount: 5
+  }
+];
+
+// 2. ΛΙΣΤΕΣ POIS
+const poisByCategory = {
+  "Q570116": [ // --- ΜΟΥΣΕΙΑ ---
+    { 
+      id: "poi_archaeological", wikidataId: "Q4785410", 
+      coordinates: { lat: 39.6675, lon: 20.8550 },
+      // Verified: Archaeological_Museum_of_Ioannina.jpg
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Archaeological_Museum_of_Ioannina.jpg",
+      label_el: "Αρχαιολογικό Μουσείο", shortDescription_el: "Ευρήματα από όλη την Ήπειρο.",
+      label_en: "Archaeological Museum", shortDescription_en: "Findings from all over Epirus."
+    },
+    { 
+      id: "poi_silversmithing", wikidataId: "Q24262597", 
+      coordinates: { lat: 39.6708, lon: 20.8625 },
+      // Verified: Ioannina_Castle_galleries.jpg (Γενική κάστρου/στοών)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Μουσείο Αργυροτεχνίας", shortDescription_el: "Τεχνολογία αργυροχοΐας στο Κάστρο.",
+      label_en: "Silversmithing Museum", shortDescription_en: "Silver technology inside the Castle."
+    },
+    { 
+      id: "poi_byzantine", wikidataId: "Q5004702", 
+      coordinates: { lat: 39.6705, lon: 20.8630 },
+      // Verified: Ioannina_Municipal_Ethnographic_museum.jpg (Βυζαντινό στυλ)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Municipal_Ethnographic_museum.jpg",
+      label_el: "Βυζαντινό Μουσείο", shortDescription_el: "Εκθέματα Βυζαντινής εποχής.",
+      label_en: "Byzantine Museum", shortDescription_en: "Exhibits from the Byzantine era."
+    },
+    { 
+      id: "poi_vrellis", wikidataId: "Q12882255", 
+      coordinates: { lat: 39.5440, lon: 20.8500 },
+      // Verified: Ioannina_Castle_(by_Pudelek).JPG (Placeholder γενικής άποψης)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_(by_Pudelek).JPG",
+      label_el: "Μουσείο Βρέλλη", shortDescription_el: "Μουσείο κέρινων ομοιωμάτων.",
+      label_en: "Vrellis Museum", shortDescription_en: "Wax effigies museum."
+    },
+    { 
+      id: "poi_gallery", wikidataId: "Q16329432", 
+      coordinates: { lat: 39.6650, lon: 20.8520 },
+      // Verified: Ioannina_Castle_galleries.jpg (Generic)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Δημοτική Πινακοθήκη", shortDescription_el: "Έργα Νεοελλήνων ζωγράφων.",
+      label_en: "Municipal Gallery", shortDescription_en: "Works of Modern Greek painters."
+    }
+  ],
+  "Q23413": [ // --- ΙΣΤΟΡΙΑ ---
+    { 
+      id: "poi_castle", wikidataId: "Q3034599", 
+      coordinates: { lat: 39.6710, lon: 20.8630 },
+      // Verified: Ioannina_Castle_(by_Pudelek).JPG
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_(by_Pudelek).JPG",
+      label_el: "Κάστρο Ιωαννίνων", shortDescription_el: "Η οχυρωμένη παλιά πόλη.",
+      label_en: "Ioannina Castle", shortDescription_en: "The fortified old town."
+    },
+    { 
+      id: "poi_fethiye", wikidataId: "Q5445974", 
+      coordinates: { lat: 39.6715, lon: 20.8640 },
+      // Verified: Ioannina_Castle_galleries.jpg
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Φετιχέ Τζαμί", shortDescription_el: "Οθωμανικό τέμενος στο Ιτς Καλέ.",
+      label_en: "Fethiye Mosque", shortDescription_en: "Ottoman mosque in Its Kale."
+    },
+    { 
+      id: "poi_aslan", wikidataId: "Q731175", 
+      coordinates: { lat: 39.6730, lon: 20.8610 },
+      // Verified: Ioannina_Municipal_Ethnographic_museum.jpg (Αυτό είναι το τζαμί Ασλάν)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Municipal_Ethnographic_museum.jpg",
+      label_el: "Τζαμί Ασλάν Πασά", shortDescription_el: "Στεγάζει το Εθνογραφικό Μουσείο.",
+      label_en: "Aslan Pasha Mosque", shortDescription_en: "Houses the Ethnographic Museum."
+    },
+    { 
+      id: "poi_soufari", wikidataId: "Q7564127", 
+      coordinates: { lat: 39.6720, lon: 20.8620 },
+      // Verified: Ioannina_Castle_galleries.jpg
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Σουφαρί Σαράι", shortDescription_el: "Πρώην σχολή ιππικού.",
+      label_en: "Soufari Sarai", shortDescription_en: "Former cavalry school."
+... (184 γραμμές ακόμα)
+Σύμπτυξη
+mockData.js
+21 KB
+﻿
+openapi: 3.0.3
+info:
+  title: POI Explorer API
+  version: 1.0.0
+  description: |
+    RESTful API for a mobile app that displays Points of Interest (POIs)
+    coming from open linked data (e.g. Wikidata/Wikimedia).
+
+servers:
+  - url: http://localhost:3000
+    description: My Local Server
+
+paths:
+  /about:
+    get:
+      summary: Get project team members
+      description: Returns the full names and student IDs (AM) of the team members.
+      security: []   # public endpoint, no auth
+      responses:
+        '200':
+          description: List of team members
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  team:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TeamMember'
+              example:
+                team:
+                  - name: "Maria Papadopoulou"
+                    studentId: "123456"
+                    role: "Backend"
+                  - name: "Giorgos Nikolaou"
+                    studentId: "234567"
+                    role: "Mobile App"
+
+  /api/auth/login:
+    post:
+      summary: Authenticate user and obtain JWT tokens
+      description: |
+        Takes user credentials and returns a pair of JWT access & refresh tokens.
+      security: []   # public endpoint, no auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            example:
+              email: "user@example.com"
+              password: "secret123"
+      responses:
+        '200':
+          description: Successful authentication
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPair'
+              example:
+                accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                refreshToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                tokenType: "Bearer"
+                expiresIn: 900
+        '400':
+          description: Invalid request (e.g. missing fields)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "BAD_REQUEST"
+                message: "Email and password are required."
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "INVALID_CREDENTIALS"
+                message: "Invalid email or password."
+
+  /api/auth/refresh:
+    post:
+      summary: Refresh JWT tokens
+      description: |
+        Takes a refresh token and returns a new pair of access & refresh tokens.
+      security: []   # public endpoint, no auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshRequest'
+            example:
+              refreshToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+      responses:
+        '200':
+          description: New token pair returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPair'
+        '400':
+          description: Invalid request (missing or malformed token)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "BAD_REQUEST"
+                message: "refreshToken is required."
+        '401':
+          description: Invalid or expired refresh token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "INVALID_TOKEN"
+                message: "Refresh token is invalid or expired."
+
+  /pois/categories:
+    get:
+      summary: Get all POI categories
+      description: |
+        Returns all POI categories collected from Wikidata, along with the
+        count of POIs in each category.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: lang
+          schema:
+            type: string
+            default: en
+          description: Optional language code for labels (e.g. 'en', 'el').
+      responses:
+        '200':
+          description: List of categories with POI counts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categories:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Category'
+              example:
+                categories:
+                  - id: "Q570116"
+                    label: "Museum"
+                    description: "Institutions that care for a collection of artifacts."
+                    poiCount: 42
+                  - id: "Q23413"
+                    label: "Park"
+                    description: "Public parks and gardens."
+                    poiCount: 17
+        '401':
+          description: Missing or invalid access token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /pois/categories/{id}:
+    get:
+      summary: Get POIs for a specific category
+      description: |
+        Returns all POIs for the selected category, with enough data to show
+        a full-screen map with markers and a small tooltip/preview on tap.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: Category identifier (e.g. Wikidata ID such as Q570116).
+          schema:
+            type: string
+        - in: query
+          name: lang
+          schema:
+            type: string
+            default: en
+          description: Optional language code for labels and descriptions.
+      responses:
+        '200':
+          description: List of POIs for the category
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categoryId:
+                    type: string
+                  pois:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PoiSummary'
+              example:
+                categoryId: "Q570116"
+                pois:
+                  - id: "poi_athens_acropolis_museum"
+                    wikidataId: "Q842858"
+                    label: "Acropolis Museum"
+                    coordinates:
+                      lat: 37.9681
+                      lon: 23.7286
+                    thumbnailUrl: "https://upload.wikimedia.org/..."
+                    shortDescription: "Archaeological museum focused on the findings from the Acropolis."
+                  - id: "poi_benaki_museum"
+                    wikidataId: "Q808320"
+                    label: "Benaki Museum"
+                    coordinates:
+                      lat: 37.9753
+                      lon: 23.7430
+                    thumbnailUrl: "https://upload.wikimedia.org/..."
+                    shortDescription: "One of the oldest museums in Greece, housing diverse collections."
+        '401':
+          description: Missing or invalid access token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Category not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "NOT_FOUND"
+                message: "Category with id Q570116 was not found."
+
+  /pois/{id}:
+    get:
+      summary: Get details for a single POI
+      description: |
+        Returns detailed data for a POI, including coordinates, descriptions,
+        multimedia, and links back to Wikidata/Wikipedia.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: Internal POI identifier used by your backend.
+          schema:
+            type: string
+        - in: query
+          name: lang
+          schema:
+            type: string
+            default: en
+          description: Optional language code for labels and descriptions.
+      responses:
+        '200':
+          description: Detailed POI information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PoiDetail'
+              example:
+                id: "poi_athens_acropolis_museum"
+                wikidataId: "Q842858"
+                label: "Acropolis Museum"
+                description: "The Acropolis Museum is an archaeological museum focused on the findings of the archaeological site of the Acropolis of Athens."
+                coordinates:
+                  lat: 37.9681
+                  lon: 23.7286
+                address: "15 Dionysiou Areopagitou Street, Athens, Greece"
+                categoryId: "Q570116"
+                wikipediaUrl: "https://en.wikipedia.org/wiki/Acropolis_Museum"
+                thumbnailUrl: "https://upload.wikimedia.org/..."
+                images:
+                  - url: "https://upload.wikimedia.org/..."
+                    caption: "Front view of the museum"
+                lastSyncedAt: "2025-02-01T12:34:56Z"
+        '401':
+          description: Missing or invalid access token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: POI not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "NOT_FOUND"
+                message: "POI with id poi_athens_acropolis_museum was not found."
+
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        Provide the access token as: `Authorization: Bearer <token>`.
+
+  schemas:
+    TeamMember:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Full name of the team member.
+        studentId:
+          type: string
+          description: Student ID (AM).
+        role:
+          type: string
+          description: Optional role in the project (e.g. "Backend", "Mobile").
+      required:
+        - name
+        - studentId
+
+    LoginRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+      required:
+        - email
+        - password
+
+    TokenPair:
+      type: object
+      properties:
+        accessToken:
+          type: string
+          description: Short-lived JWT used for authenticated requests.
+        refreshToken:
+          type: string
+          description: Longer-lived JWT used to obtain new access tokens.
+        tokenType:
+          type: string
+          description: Token type, typically "Bearer".
+          default: "Bearer"
+        expiresIn:
+          type: integer
+          description: Access token lifetime in seconds.
+          example: 900
+      required:
+        - accessToken
+        - refreshToken
+
+    RefreshRequest:
+      type: object
+      properties:
+        refreshToken:
+          type: string
+      required:
+        - refreshToken
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Machine-readable error code.
+        message:
+          type: string
+          description: Human-readable error description.
+      required:
+        - code
+        - message
+
+    Category:
+      type: object
+      description: POI category as derived from Wikidata.
+      properties:
+        id:
+          type: string
+          description: Category identifier (e.g. Wikidata Q-ID).
+          example: "Q570116"
+        label:
+          type: string
+          description: Human-readable label for the category.
+          example: "Museum"
+        description:
+          type: string
+          description: Short description of the category.
+        poiCount:
+          type: integer
+          description: Number of POIs in this category.
+      required:
+        - id
+        - label
+        - poiCount
+
+    GeoPoint:
+      type: object
+      properties:
+        lat:
+          type: number
+          format: double
+        lon:
+          type: number
+          format: double
+      required:
+        - lat
+        - lon
+
+    MediaItem:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+        caption:
+          type: string
+      required:
+        - url
+
+    PoiSummary:
+      type: object
+      description: Summary information used for list/map views.
+      properties:
+        id:
+          type: string
+          description: Internal POI identifier.
+        wikidataId:
+          type: string
+          description: Original Wikidata ID.
+          example: "Q842858"
+        label:
+          type: string
+          description: Main title of the POI in the requested language.
+        coordinates:
+          $ref: '#/components/schemas/GeoPoint'
+        thumbnailUrl:
+          type: string
+          format: uri
+          description: Small image suitable for map tooltips or list items.
+        shortDescription:
+          type: string
+          description: Short text preview for the POI.
+      required:
+        - id
+        - wikidataId
+        - label
+        - coordinates
+
+    PoiDetail:
+      type: object
+      description: Detailed information about a POI.
+      properties:
+        id:
+          type: string
+          description: Internal POI identifier.
+        wikidataId:
+          type: string
+          description: Original Wikidata ID.
+        label:
+          type: string
+          description: Title in the requested language.
+        description:
+          type: string
+          description: Long-form description for the POI.
+        coordinates:
+          $ref: '#/components/schemas/GeoPoint'
+        address:
+          type: string
+          description: Optional human-readable address.
+        categoryId:
+          type: string
+          description: ID of the category that this POI belongs to.
+        wikipediaUrl:
+          type: string
+          format: uri
+          description: Link to the related Wikipedia article.
+        thumbnailUrl:
+          type: string
+          format: uri
+          description: Main thumbnail image.
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaItem'
+        lastSyncedAt:
+          type: string
+          format: date-time
+          description: When this POI was last synced from Wikidata.
+      required:
+        - id
+        - wikidataId
+        - label
+        - coordinates
+kiriakos
+kiriakos_theodoropoulos
+Συνδεδεμένος
+
+Hector — 27/05/2025 21:10
+https://app.filen.io/#/d/99f9e126-165a-4416-99cc-1cc1213d7c6e%23XOvqkLRs2dwkkuAUnYTNTzVpC2KS62Zu
+Filen
+Filen – Next Generation End-To-End Encrypted Cloud Platform. Get started with 10 GB of free storage space.
+Hector — 27/05/2025 23:02
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      
+"8080:80"
+  volumes:
+.:/var/www/html
+depends_on:
+db
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      
+db_data:/var/lib/mysql
+
+volumes:
+  db_data:
+http://localhost/SpotifyRevancedon.php
+http://localhost:8080/index.php?route=/database/structure&db=streaming_site
+Hector — 28/05/2025 00:16
+https://drive.filen.io/d/cf186118-7061-4e24-af08-dad989189598#AnKP2dYOmzXYHuClJobj2V1hmpI5uLzv
+Filen Drive
+Filen – Next Generation End-To-End Encrypted Cloud Platform. Get started with 10 GB of free storage space.
+kiriakos — 28/05/2025 11:14
+Τύπος συνημμένου αρχείου: document
+Video Revanced.docx
+25.84 KB
+Hector — 28/05/2025 11:41
+Εικόνα
+Εικόνα
+Εικόνα
+Εικόνα
+Εικόνα
+Hector — 28/05/2025 12:26
+https://app.filen.io/#/d/3e6b3244-4901-4e6b-a3ea-7326f422eab1%23iQZmfNnRQoU5vd5dqP4rva2BLLobqVHF
+Filen
+Filen – Next Generation End-To-End Encrypted Cloud Platform. Get started with 10 GB of free storage space.
+Hector — 28/05/2025 14:25
+https://chatgpt.com/share/68350be7-63cc-8005-8033-99b43845c5da
+ChatGPT
+ChatGPT - K-fold Cross Validation Explained
+Shared via ChatGPT
+Εικόνα
+Hector — 28/05/2025 23:50
+Για το split σε train και test χρησιμοποιήθηκε k-fold cross validation που έσπαγε το dataset σε 90% train & 10% test.
+Επίσης έβαλα feature selection που χρησιμοποιούσε μόνο τις 10 πιο χρήσιμες κατηγορίες ανά fold. Έβαλα όλα αυτά σε ένα pipeline για να περιορίσω 
+πιθανό data leak και τέλος για το model training χρησιμοποίησα το random forest. Στην αρχική του μορφή δεν λειτουργούσε πολύ δίνοντας πολύ υψηλό ποσοστό ακρίβειας το "όχι" ~90%. Όμως για το "Ναι" η ιστορία είναι διαφορετική καθώς είχε αρχικά ποσοστό ακρίβειας μόνο ~40%. Έπειτα δοκίμασα να μειώσω το threshold για την ευκολία που θα μπορούσε να προκύψει το "ναι", από 0.5 σε 0.3 έχοντας το 0.5 ως συντηρητικός αλλά ακριβής, μία μέση λύση. Αυτή η αλλαγή είχε αύξηση ~10% για το "Ναι" και το "Όχι" ήταν στα ίδια νούμερα (το όχι είναι πάντα στο ίδιο ποσοστό και δεν θα αναφερθώ άλλο σε αυτό). Επίσης δοκίμασα αντί να μειώσω το threshold να κάνω oversample το "ναι" και το έκανα με RandomOversampler που έδωσε μία αύξηση του "ναι" ~5%. Αν βάλω συνδυαστικά και τα δυο ανεβαίνει στο ~7% κάτι που είναι παράξενο καθώς από μόνο του το threshold κανονικά αυξάνει γύρω 
+στο 10%. Τέλος άλλαξα το oversampler σε Smotenc και είδα αύξηση ~11% όμως αν βάλω και threshold περιέργως μειώνεται ~-3%, οπότε εν τέλη κατέληξα 
+σε smotenc μαζί με threshold 0.45 που είχε αύξηση ~12%.
+notes.txt
+3 KB
+αυτό είναι για το Report
+βάλε το στο δικό σου και κάνε ότι μικροαλλαγές θέλει για ομορφιά
+kiriakos — 30/05/2025 18:41
+Τύπος συνημμένου αρχείου: document
+dss.docx
+255.80 KB
+to report
+Hector — 31/05/2025 13:24
+κομπλε φαίνεται
+μία χαρά
+kiriakos — 31/05/2025 14:24
+Στείλε του το μαζί με τον κώδικα κ όλα αυτά
+Hector — 31/05/2025 14:25
+νια οκ οκ
+kiriakos — 31/05/2025 14:42
+Όταν το στείλεις πες μου
+Hector — 31/05/2025 14:42
+οκ
+Hector — 02/06/2025 04:51
+Δεν μπορώ να το στείλω, δεν έχει λινκ ακόμα για να την εργασία
+kiriakos — 03/06/2025 19:37
+του το στελνεις σε ιμαιλ
+Hector — 03/06/2025 19:38
+Όχι, το ξανάνοιξε τλκ και το ανέβασα
+kiriakos — 03/06/2025 19:38
+καταλαθος με πηρες;
+Hector — 03/06/2025 19:41
+Ναι 😅
+kiriakos — 19/09/2025 18:25
+μπρο ολα καλα;
+Hector — 19/09/2025 18:26
+Ναι τα βρηκα
+Θα σου πω
+kiriakos — 19/09/2025 18:26
+υπομονη]
+Hector — 19/09/2025 20:33
+Θενκ γιου
+Θενκ γιου
+kiriakos — 23/09/2025 17:00
+Βγήκαν πιθανότητες
+Αυτό δν χρωσταγες;
+Hector — 23/09/2025 18:43
+Μλκ πέρασα
+5 απίστευτο
+kiriakos — 23/11/2025 21:08
+Τύπος συνημμένου αρχείου: unknown
+ΒΙΟΙΑΤΡΙΚΗ.odp
+81.78 KB
+Hector — 23/11/2025 21:56
+Ουσιαστικά θα πεις το πως καταφέραμε να κατά πολεμήσουμε τον covid?
+Θα πεις όλη την ιστορία από το πως άρχησε και την διαδικασία δημιουργίας φαρμάκων?
+Κατάλαβα καλά?
+kiriakos — 23/11/2025 23:08
+Κάπως έτσι
+Hector — 23/11/2025 23:11
+Οκ οκ
+Εντ μεταξύ θελει PowerPoint εε, εγώ έκανα απλά ένα word
+Hector — 17/12/2025 19:09
+Αρχαιολογικό Μουσείο Ιωαννίνων: Q4785410
+
+Μουσείο Αργυροτεχνίας: Q24262597
+
+Βυζαντινό Μουσείο: Q5004702
+
+Μουσείο Κέρινων Ομοιωμάτων Βρέλλη: Q12882255
+
+Δημοτική Πινακοθήκη Ιωαννίνων: Q16329432
+
+Κατηγορία 2: Κάστρο & Ιστορία (ID: history)
+Κάστρο Ιωαννίνων: Q3034599
+
+Φετιχέ Τζαμί: Q5445974
+
+Τζαμί Ασλάν Πασά: Q731175
+
+Σουφαρί Σαράι: Q7564127
+
+Πύργος του Ρολογιού: Q12884179
+
+Κατηγορία 3: Φύση & Νησί (ID: nature)
+Λίμνη Παμβώτιδα: Q1144673
+
+Νήσος Ιωαννίνων: Q2465715
+
+Σπήλαιο Περάματος: Q776037
+
+Μονή Αγίου Παντελεήμονα (Νησί): Q3560649
+
+Μονή Φιλανθρωπινών: Q1924294
+Hector — Χθες στις 03:13
+εεε
+ακυρο αυτό το αρχειο που σου έσετιλα
+αυτό που θα σου στείλω τώρα έχει αλλαγμένες κάτι μεταβλητές, απλά στείλε το στον ai και πές το να σου προσαρμόσει το υπόλοιπο με βάση το καινούργιο αρχειο
+// Αρχείο: dummyData.js (FRONTEND VERSION)
+
+export const categories = [
+  {
+    id: "Q570116",
+    label: "Μουσεία",
+Ανάπτυξη
+dummyData.js
+9 KB
+Hector — 17:49
+const express = require('express');
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
+const { categories, poisByCategory, poiDetails } = require('./mockData'); 
+
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerDocument = YAML.load('./swagger.yaml');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Swagger Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// --- ΜΥΣΤΙΚΑ ΚΛΕΙΔΙΑ ---
+const ACCESS_SECRET = "my_super_secret_key_123"; 
+const REFRESH_SECRET = "my_refresh_secret_key_456";
+
+// --- ΒΑΣΗ ΧΡΗΣΤΩΝ (RAM) ---
+// Αποθηκεύει προσωρινά χρήστες: { "email": "password" }
+const users = {
+    "admin@test.com": "1234"
+};
+
+// --- ΒΟΗΘΗΤΙΚΕΣ ΣΥΝΑΡΤΗΣΕΙΣ ---
+
+// 1. Επιλογή Γλώσσας (Clean up JSON)
+function selectLanguage(item, lang) {
+    const suffix = (lang === 'en') ? '_en' : '_el';
+    const newItem = { ...item };
+
+    // Αντικατάσταση πεδίων με τη σωστή γλώσσα
+    if (newItem[`label${suffix}`]) newItem.label = newItem[`label${suffix}`];
+    if (newItem[`description${suffix}`]) newItem.description = newItem[`description${suffix}`];
+    if (newItem[`shortDescription${suffix}`]) newItem.shortDescription = newItem[`shortDescription${suffix}`];
+    if (newItem[`wikipediaUrl${suffix}`]) newItem.wikipediaUrl = newItem[`wikipediaUrl${suffix}`];
+
+    // Καθαρισμός των _en και _el
+    delete newItem.label_en; delete newItem.label_el;
+    delete newItem.description_en; delete newItem.description_el;
+    delete newItem.shortDescription_en; delete newItem.shortDescription_el;
+    delete newItem.wikipediaUrl_en; delete newItem.wikipediaUrl_el;
+
+    return newItem;
+}
+
+// 2. Middleware Ασφαλείας (Check Token)
+function authenticateToken(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
+
+    if (token == null) return res.status(401).json({ code: "UNAUTHORIZED", message: "Missing token" });
+
+    jwt.verify(token, ACCESS_SECRET, (err, user) => {
+        if (err) return res.status(403).json({ code: "FORBIDDEN", message: "Invalid or expired token" });
+        req.user = user;
+        next();
+    });
+}
+
+// --- ENDPOINTS ---
+
+// LOGIN (Δημιουργεί χρήστη αν δεν υπάρχει, αλλιώς ελέγχει κωδικό)
+app.post('/api/auth/login', (req, res) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.status(400).json({ code: "BAD_REQUEST", message: "Email and password are required." });
+    }
+
+    // Αν ο χρήστης υπάρχει, ελέγχουμε κωδικό
+    if (users[email]) {
+        if (users[email] !== password) {
+            return res.status(401).json({ code: "INVALID_CREDENTIALS", message: "Invalid password." });
+        }
+    } else {
+        // Αν δεν υπάρχει, τον φτιάχνουμε τώρα (Auto-Register)
+        users[email] = password;
+    }
+
+    // Παραγωγή Tokens
+    const accessToken = jwt.sign({ email: email }, ACCESS_SECRET, { expiresIn: '15m' });
+    const refreshToken = jwt.sign({ email: email }, REFRESH_SECRET, { expiresIn: '7d' });
+
+    res.json({ accessToken, refreshToken, tokenType: "Bearer", expiresIn: 900 });
+});
+
+// REFRESH TOKEN
+app.post('/api/auth/refresh', (req, res) => {
+    const { refreshToken } = req.body;
+    if (!refreshToken) return res.status(400).json({ code: "BAD_REQUEST", message: "refreshToken required." });
+
+    jwt.verify(refreshToken, REFRESH_SECRET, (err, user) => {
+        if (err) return res.status(401).json({ code: "INVALID_TOKEN", message: "Invalid refresh token." });
+        
+        const newAccessToken = jwt.sign({ email: user.email }, ACCESS_SECRET, { expiresIn: '15m' });
+        res.json({ accessToken: newAccessToken, refreshToken, tokenType: "Bearer", expiresIn: 900 });
+    });
+... (53 γραμμές ακόμα)
+Σύμπτυξη
+index.js
+6 KB
+openapi: 3.0.3
+info:
+  title: POI Explorer API
+  version: 1.0.0
+  description: |
+    RESTful API for a mobile app that displays Points of Interest (POIs)
+Ανάπτυξη
+swagger.yaml
+16 KB
+Hector — 18:23
+// Αρχείο: mockData.js (VERIFIED IMAGES VERSION)
+
+// 1. ΚΑΤΗΓΟΡΙΕΣ
+const categories = [
+  {
+    id: "Q570116",
+    label_el: "Μουσεία", description_el: "Μουσεία και χώροι πολιτισμού.",
+    label_en: "Museums", description_en: "Museums and cultural sites.",
+    poiCount: 5
+  },
+  {
+    id: "Q23413",
+    label_el: "Ιστορία", description_el: "Ιστορικά κτίρια και το Κάστρο.",
+    label_en: "History", description_en: "Historical buildings and the Castle.",
+    poiCount: 5
+  },
+  {
+    id: "Q20016",
+    label_el: "Φύση", description_el: "Η λίμνη Παμβώτιδα και φυσικά τοπία.",
+    label_en: "Nature", description_en: "Lake Pamvotis and natural landscapes.",
+    poiCount: 5
+  }
+];
+
+// 2. ΛΙΣΤΕΣ POIS
+const poisByCategory = {
+  "Q570116": [ // --- ΜΟΥΣΕΙΑ ---
+    { 
+      id: "poi_archaeological", wikidataId: "Q4785410", 
+      coordinates: { lat: 39.6675, lon: 20.8550 },
+      // Verified: Archaeological_Museum_of_Ioannina.jpg
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Archaeological_Museum_of_Ioannina.jpg",
+      label_el: "Αρχαιολογικό Μουσείο", shortDescription_el: "Ευρήματα από όλη την Ήπειρο.",
+      label_en: "Archaeological Museum", shortDescription_en: "Findings from all over Epirus."
+    },
+    { 
+      id: "poi_silversmithing", wikidataId: "Q24262597", 
+      coordinates: { lat: 39.6708, lon: 20.8625 },
+      // Verified: Ioannina_Castle_galleries.jpg (Γενική κάστρου/στοών)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Μουσείο Αργυροτεχνίας", shortDescription_el: "Τεχνολογία αργυροχοΐας στο Κάστρο.",
+      label_en: "Silversmithing Museum", shortDescription_en: "Silver technology inside the Castle."
+    },
+    { 
+      id: "poi_byzantine", wikidataId: "Q5004702", 
+      coordinates: { lat: 39.6705, lon: 20.8630 },
+      // Verified: Ioannina_Municipal_Ethnographic_museum.jpg (Βυζαντινό στυλ)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Municipal_Ethnographic_museum.jpg",
+      label_el: "Βυζαντινό Μουσείο", shortDescription_el: "Εκθέματα Βυζαντινής εποχής.",
+      label_en: "Byzantine Museum", shortDescription_en: "Exhibits from the Byzantine era."
+    },
+    { 
+      id: "poi_vrellis", wikidataId: "Q12882255", 
+      coordinates: { lat: 39.5440, lon: 20.8500 },
+      // Verified: Ioannina_Castle_(by_Pudelek).JPG (Placeholder γενικής άποψης)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_(by_Pudelek).JPG",
+      label_el: "Μουσείο Βρέλλη", shortDescription_el: "Μουσείο κέρινων ομοιωμάτων.",
+      label_en: "Vrellis Museum", shortDescription_en: "Wax effigies museum."
+    },
+    { 
+      id: "poi_gallery", wikidataId: "Q16329432", 
+      coordinates: { lat: 39.6650, lon: 20.8520 },
+      // Verified: Ioannina_Castle_galleries.jpg (Generic)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Δημοτική Πινακοθήκη", shortDescription_el: "Έργα Νεοελλήνων ζωγράφων.",
+      label_en: "Municipal Gallery", shortDescription_en: "Works of Modern Greek painters."
+    }
+  ],
+  "Q23413": [ // --- ΙΣΤΟΡΙΑ ---
+    { 
+      id: "poi_castle", wikidataId: "Q3034599", 
+      coordinates: { lat: 39.6710, lon: 20.8630 },
+      // Verified: Ioannina_Castle_(by_Pudelek).JPG
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_(by_Pudelek).JPG",
+      label_el: "Κάστρο Ιωαννίνων", shortDescription_el: "Η οχυρωμένη παλιά πόλη.",
+      label_en: "Ioannina Castle", shortDescription_en: "The fortified old town."
+    },
+    { 
+      id: "poi_fethiye", wikidataId: "Q5445974", 
+      coordinates: { lat: 39.6715, lon: 20.8640 },
+      // Verified: Ioannina_Castle_galleries.jpg
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Φετιχέ Τζαμί", shortDescription_el: "Οθωμανικό τέμενος στο Ιτς Καλέ.",
+      label_en: "Fethiye Mosque", shortDescription_en: "Ottoman mosque in Its Kale."
+    },
+    { 
+      id: "poi_aslan", wikidataId: "Q731175", 
+      coordinates: { lat: 39.6730, lon: 20.8610 },
+      // Verified: Ioannina_Municipal_Ethnographic_museum.jpg (Αυτό είναι το τζαμί Ασλάν)
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Municipal_Ethnographic_museum.jpg",
+      label_el: "Τζαμί Ασλάν Πασά", shortDescription_el: "Στεγάζει το Εθνογραφικό Μουσείο.",
+      label_en: "Aslan Pasha Mosque", shortDescription_en: "Houses the Ethnographic Museum."
+    },
+    { 
+      id: "poi_soufari", wikidataId: "Q7564127", 
+      coordinates: { lat: 39.6720, lon: 20.8620 },
+      // Verified: Ioannina_Castle_galleries.jpg
+      thumbnailUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ioannina_Castle_galleries.jpg",
+      label_el: "Σουφαρί Σαράι", shortDescription_el: "Πρώην σχολή ιππικού.",
+      label_en: "Soufari Sarai", shortDescription_en: "Former cavalry school."
+... (184 γραμμές ακόμα)
+Σύμπτυξη
+mockData.js
+21 KB
+﻿
+openapi: 3.0.3
+info:
+  title: POI Explorer API
+  version: 1.0.0
+  description: |
+    RESTful API for a mobile app that displays Points of Interest (POIs)
+    coming from open linked data (e.g. Wikidata/Wikimedia).
+
+servers:
+  - url: http://localhost:3000
+    description: My Local Server
+
+paths:
+  /about:
+    get:
+      summary: Get project team members
+      description: Returns the full names and student IDs (AM) of the team members.
+      security: []   # public endpoint, no auth
+      responses:
+        '200':
+          description: List of team members
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  team:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TeamMember'
+              example:
+                team:
+                  - name: "Maria Papadopoulou"
+                    studentId: "123456"
+                    role: "Backend"
+                  - name: "Giorgos Nikolaou"
+                    studentId: "234567"
+                    role: "Mobile App"
+
+  /api/auth/login:
+    post:
+      summary: Authenticate user and obtain JWT tokens
+      description: |
+        Takes user credentials and returns a pair of JWT access & refresh tokens.
+      security: []   # public endpoint, no auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            example:
+              email: "user@example.com"
+              password: "secret123"
+      responses:
+        '200':
+          description: Successful authentication
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPair'
+              example:
+                accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                refreshToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                tokenType: "Bearer"
+                expiresIn: 900
+        '400':
+          description: Invalid request (e.g. missing fields)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "BAD_REQUEST"
+                message: "Email and password are required."
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "INVALID_CREDENTIALS"
+                message: "Invalid email or password."
+
+  /api/auth/refresh:
+    post:
+      summary: Refresh JWT tokens
+      description: |
+        Takes a refresh token and returns a new pair of access & refresh tokens.
+      security: []   # public endpoint, no auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshRequest'
+            example:
+              refreshToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+      responses:
+        '200':
+          description: New token pair returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPair'
+        '400':
+          description: Invalid request (missing or malformed token)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "BAD_REQUEST"
+                message: "refreshToken is required."
+        '401':
+          description: Invalid or expired refresh token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "INVALID_TOKEN"
+                message: "Refresh token is invalid or expired."
+
+  /pois/categories:
+    get:
+      summary: Get all POI categories
+      description: |
+        Returns all POI categories collected from Wikidata, along with the
+        count of POIs in each category.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: lang
+          schema:
+            type: string
+            default: en
+          description: Optional language code for labels (e.g. 'en', 'el').
+      responses:
+        '200':
+          description: List of categories with POI counts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categories:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Category'
+              example:
+                categories:
+                  - id: "Q570116"
+                    label: "Museum"
+                    description: "Institutions that care for a collection of artifacts."
+                    poiCount: 42
+                  - id: "Q23413"
+                    label: "Park"
+                    description: "Public parks and gardens."
+                    poiCount: 17
+        '401':
+          description: Missing or invalid access token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /pois/categories/{id}:
+    get:
+      summary: Get POIs for a specific category
+      description: |
+        Returns all POIs for the selected category, with enough data to show
+        a full-screen map with markers and a small tooltip/preview on tap.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: Category identifier (e.g. Wikidata ID such as Q570116).
+          schema:
+            type: string
+        - in: query
+          name: lang
+          schema:
+            type: string
+            default: en
+          description: Optional language code for labels and descriptions.
+      responses:
+        '200':
+          description: List of POIs for the category
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categoryId:
+                    type: string
+                  pois:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PoiSummary'
+              example:
+                categoryId: "Q570116"
+                pois:
+                  - id: "poi_athens_acropolis_museum"
+                    wikidataId: "Q842858"
+                    label: "Acropolis Museum"
+                    coordinates:
+                      lat: 37.9681
+                      lon: 23.7286
+                    thumbnailUrl: "https://upload.wikimedia.org/..."
+                    shortDescription: "Archaeological museum focused on the findings from the Acropolis."
+                  - id: "poi_benaki_museum"
+                    wikidataId: "Q808320"
+                    label: "Benaki Museum"
+                    coordinates:
+                      lat: 37.9753
+                      lon: 23.7430
+                    thumbnailUrl: "https://upload.wikimedia.org/..."
+                    shortDescription: "One of the oldest museums in Greece, housing diverse collections."
+        '401':
+          description: Missing or invalid access token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Category not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "NOT_FOUND"
+                message: "Category with id Q570116 was not found."
+
+  /pois/{id}:
+    get:
+      summary: Get details for a single POI
+      description: |
+        Returns detailed data for a POI, including coordinates, descriptions,
+        multimedia, and links back to Wikidata/Wikipedia.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: Internal POI identifier used by your backend.
+          schema:
+            type: string
+        - in: query
+          name: lang
+          schema:
+            type: string
+            default: en
+          description: Optional language code for labels and descriptions.
+      responses:
+        '200':
+          description: Detailed POI information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PoiDetail'
+              example:
+                id: "poi_athens_acropolis_museum"
+                wikidataId: "Q842858"
+                label: "Acropolis Museum"
+                description: "The Acropolis Museum is an archaeological museum focused on the findings of the archaeological site of the Acropolis of Athens."
+                coordinates:
+                  lat: 37.9681
+                  lon: 23.7286
+                address: "15 Dionysiou Areopagitou Street, Athens, Greece"
+                categoryId: "Q570116"
+                wikipediaUrl: "https://en.wikipedia.org/wiki/Acropolis_Museum"
+                thumbnailUrl: "https://upload.wikimedia.org/..."
+                images:
+                  - url: "https://upload.wikimedia.org/..."
+                    caption: "Front view of the museum"
+                lastSyncedAt: "2025-02-01T12:34:56Z"
+        '401':
+          description: Missing or invalid access token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: POI not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "NOT_FOUND"
+                message: "POI with id poi_athens_acropolis_museum was not found."
+
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        Provide the access token as: `Authorization: Bearer <token>`.
+
+  schemas:
+    TeamMember:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Full name of the team member.
+        studentId:
+          type: string
+          description: Student ID (AM).
+        role:
+          type: string
+          description: Optional role in the project (e.g. "Backend", "Mobile").
+      required:
+        - name
+        - studentId
+
+    LoginRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+      required:
+        - email
+        - password
+
+    TokenPair:
+      type: object
+      properties:
+        accessToken:
+          type: string
+          description: Short-lived JWT used for authenticated requests.
+        refreshToken:
+          type: string
+          description: Longer-lived JWT used to obtain new access tokens.
+        tokenType:
+          type: string
+          description: Token type, typically "Bearer".
+          default: "Bearer"
+        expiresIn:
+          type: integer
+          description: Access token lifetime in seconds.
+          example: 900
+      required:
+        - accessToken
+        - refreshToken
+
+    RefreshRequest:
+      type: object
+      properties:
+        refreshToken:
+          type: string
+      required:
+        - refreshToken
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Machine-readable error code.
+        message:
+          type: string
+          description: Human-readable error description.
+      required:
+        - code
+        - message
+
+    Category:
+      type: object
+      description: POI category as derived from Wikidata.
+      properties:
+        id:
+          type: string
+          description: Category identifier (e.g. Wikidata Q-ID).
+          example: "Q570116"
+        label:
+          type: string
+          description: Human-readable label for the category.
+          example: "Museum"
+        description:
+          type: string
+          description: Short description of the category.
+        poiCount:
+          type: integer
+          description: Number of POIs in this category.
+      required:
+        - id
+        - label
+        - poiCount
+
+    GeoPoint:
+      type: object
+      properties:
+        lat:
+          type: number
+          format: double
+        lon:
+          type: number
+          format: double
+      required:
+        - lat
+        - lon
+
+    MediaItem:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+        caption:
+          type: string
+      required:
+        - url
+
+    PoiSummary:
+      type: object
+      description: Summary information used for list/map views.
+      properties:
+        id:
+          type: string
+          description: Internal POI identifier.
+        wikidataId:
+          type: string
+          description: Original Wikidata ID.
+          example: "Q842858"
+        label:
+          type: string
+          description: Main title of the POI in the requested language.
+        coordinates:
+          $ref: '#/components/schemas/GeoPoint'
+        thumbnailUrl:
+          type: string
+          format: uri
+          description: Small image suitable for map tooltips or list items.
+        shortDescription:
+          type: string
+          description: Short text preview for the POI.
+      required:
+        - id
+        - wikidataId
+        - label
+        - coordinates
+
+    PoiDetail:
+      type: object
+      description: Detailed information about a POI.
+      properties:
+        id:
+          type: string
+          description: Internal POI identifier.
+        wikidataId:
+          type: string
+          description: Original Wikidata ID.
+        label:
+          type: string
+          description: Title in the requested language.
+        description:
+          type: string
+          description: Long-form description for the POI.
+        coordinates:
+          $ref: '#/components/schemas/GeoPoint'
+        address:
+          type: string
+          description: Optional human-readable address.
+        categoryId:
+          type: string
+          description: ID of the category that this POI belongs to.
+        wikipediaUrl:
+          type: string
+          format: uri
+          description: Link to the related Wikipedia article.
+        thumbnailUrl:
+          type: string
+          format: uri
+          description: Main thumbnail image.
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaItem'
+        lastSyncedAt:
+          type: string
+          format: date-time
+          description: When this POI was last synced from Wikidata.
+      required:
+        - id
+        - wikidataId
+        - label
+        - coordinates
+swagger.yaml
+16 KB
